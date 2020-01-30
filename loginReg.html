@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" content="text/html"/>
+		<title>用户信息</title>
+<!--引入js-->
+		<script src="js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/LoginReg.js" type="text/javascript" charset="utf-8"></script>
+<!--		引入css-->
+		<link rel="stylesheet" href="css/LoginReg.css" type="text/css" charset="UTF-8">
+	</head>
+	<body>
+		<ul class="color">
+			<li class="one" style="background-color: #161616;"></li>
+			<li class="two" style="background-color: #29333f;"></li>
+			<li class="three" style="background-color: #29282e;"></li>
+			<li class="four" style="background-color: #FFFFFF;"></li>
+		</ul>
+<!--		登录-->
+		<div id="log">
+			<div class="logo_box">
+				<h3>
+					<img src="img/tx.png" class="imguser">
+					<br>
+					用户登录
+				</h3>
+<!--				表单-->
+				<form name="loginForm" method="post" action="">
+					<div class="input_outer"> <span class="u_user"></span>
+						<input id="uname" name="uname" class="text" type="text" placeholder="请输入账号" autocomplete="off" maxlength="8">
+					</div>
+					<div class="input_outer"> <span class="us_uer"></span>
+						<input id="upassword" name="upassword" class="text" placeholder="请输入密码" type="password" autocomplete="off" minlength="8" maxlength="16">
+					</div>
+					<span style="position: absolute;right: 20px;font-size: 13px;"><a href="">找回密码</a></span>
+					<br><br>
+					<div class="mb2">
+						<input type="Submit" class="mb2_submit" value="登 录">
+					</div>
+					<a href="JavaScript:reg();" style="font-size: 13px;">无账号？点击注册</a>
+					<span style="position: absolute;right: 20px;font-size: 13px;"><a href="">刷脸登录</a></span>
+				</form>
+			</div>
+		</div>
+
+<!--		注册-->
+		<div id="reg" style="display: none;">
+			<div class="logo_box">
+				<h3>
+					<img src="img/tx.png" class="imguser">
+					<br>
+					用户注册
+				</h3>
+				<form name="loginForm" method="post" action="">
+					<div class="input_outer"> <span class="u_user"></span>
+						<input  class="text" type="text" placeholder="用户名" autocomplete="off" maxlength="8">
+					</div>
+					<div class="input_outer"> <span class="us_eamil"></span>
+						<input  class="text" placeholder="QQ邮箱" type="email" autocomplete="off">
+					</div>
+					<div class="input_yzm"> <span class="us_yzm"></span>
+						<input class="text" placeholder="请验证码" type="text" autocomplete="off">
+					</div>
+					<input type="button" class="div_yzm" id="btn" style="line-height: 40px;" value="获取验证码" onclick="settime(this)">
+					<div class="input_outer"> <span class="us_pwd"></span>
+						<input  class="text" placeholder="请输入密码" type="password" autocomplete="off" maxlength="16">
+					</div>
+					<div class="input_outer"> <span class="us_pwd2"></span>
+						<input class="text" placeholder="确认密码" type="password" autocomplete="off">
+					</div>
+					<div>
+						<input type="Submit" class="mb2_submit" value="立 即 注 册">
+					</div>
+					<a href="JavaScript:log();">已有账号？点击登录</a>
+<!--					<a href="">人脸注册。方便登录时，使用人脸。</a>-->
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
